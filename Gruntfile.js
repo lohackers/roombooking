@@ -168,8 +168,9 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,txt,html}',
             'manifest.json',
+            'views/{,*/}*.html',
             'scripts/{,*/}*.js',
             'images/{,*/}*.{gif,webp}'
           ]
@@ -199,7 +200,7 @@ module.exports = function (grunt) {
         'compass:dist',
         'copy:styles',
         'imagemin',
-        'svgmin'
+        'svgmin',
       ]
     },
     karma: {
